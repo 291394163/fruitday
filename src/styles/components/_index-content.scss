@@ -1,0 +1,57 @@
+
+
+section {
+  flex-grow: 1;
+  .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide {
+        height: 2.3rem;
+        a {
+          display: block;
+          height: 100%;
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background: rgba(0,0,0,.3);
+        width: .07rem;
+        height: .04rem;
+        border-radius: .04rem;
+      }
+      .swiper-pagination-bullet-active {
+        width: .08rem;
+        height: .08rem;
+        border: .01rem solid #fff;
+        border-radius: 100%;
+        background: #ff7e05;
+        position: relative;
+        top: .02rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

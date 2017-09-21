@@ -1,0 +1,54 @@
+
+
+.footer-box {
+  @include onepixel();
+
+  height: .42rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 -2px 2px 0 rgba(0,0,0,.15);
+  a {
+    display: flex;
+    flex-grow: 1;
+    font-size: .12rem;
+    flex-direction: column;
+    align-items: center;
+    color: $fontGray;
+    i.iconfont {
+      font-size: .2rem;
+    }
+  }
+  .active {
+    color: $baseColor;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
