@@ -5160,7 +5160,6 @@ var IndexComponent = function (_React$Component) {
             (0, _getPosition2.default)(function (position_info) {
                 console.log(position_info);
             });
-            // getPosition()
         }
     }, {
         key: "render",
@@ -5461,7 +5460,7 @@ exports = module.exports = __webpack_require__(59)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n/* 公共样式 */\nhtml, body, h1, h2, h3, h4, h5, h6, ul, li, img, dl, dt, dd, a, p {\n  padding: 0;\n  margin: 0; }\n\n* {\n  box-sizing: border-box; }\n\ninput, textarea {\n  padding: 0; }\n\ninput, button, textarea {\n  border: none; }\n\ninput:focus {\n  outline: 0; }\n\nimg {\n  border: 0; }\n\na {\n  text-decoration: none;\n  color: #000; }\n\nli {\n  list-style: none; }\n\n.clear:after {\n  content: \"\";\n  display: block;\n  clear: both; }\n\n.d-b {\n  display: block; }\n\n.d-ib {\n  display: inline-block; }\n\n.d-i {\n  display: inline; }\n\n.p-r {\n  position: relative; }\n\n.p-a {\n  position: absolute; }\n\n.p-f {\n  position: fixed; }\n\nhtml, body, #app {\n  width: 100%;\n  height: 100%; }\n\nbody {\n  font-size: .16px; }\n\n.full-height {\n  height: 100%; }\n\n.footer-box {\n  position: relative;\n  height: .42rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.15); }\n  .footer-box:after {\n    content: \"\";\n    display: block;\n    width: 100%;\n    height: 1px;\n    position: absolute;\n    top: 0;\n    left: 0;\n    background: #ccc;\n    transform: scaleY(0.5); }\n  .footer-box a {\n    display: flex;\n    flex-grow: 1;\n    font-size: .12rem;\n    flex-direction: column;\n    align-items: center;\n    color: #898989; }\n    .footer-box a i.iconfont {\n      font-size: .2rem; }\n  .footer-box .active {\n    color: #65a032; }\n\nsection {\n  flex-grow: 1; }\n\n.index-box {\n  display: flex;\n  flex-direction: column; }\n  .index-box header {\n    width: 100%;\n    height: .44rem;\n    display: flex;\n    align-items: center;\n    padding-left: .1rem;\n    padding-right: .1rem;\n    background-color: #65a032;\n    position: fixed;\n    top: 0; }\n    .index-box header .location-box {\n      font-size: .12rem;\n      color: #fff;\n      display: flex;\n      align-items: center; }\n      .index-box header .location-box i {\n        margin-top: .03rem;\n        transform: scale(0.7, 0.9); }\n    .index-box header .search-box {\n      display: flex;\n      align-items: center;\n      height: .3rem;\n      background-color: #fff;\n      padding-left: .1rem;\n      color: #898989;\n      border-radius: .05rem;\n      flex-grow: 1;\n      margin-left: .1rem; }\n      .index-box header .search-box i {\n        margin-right: .1rem; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n/* 公共样式 */\nhtml, body, h1, h2, h3, h4, h5, h6, ul, li, img, dl, dt, dd, a, p {\n  padding: 0;\n  margin: 0; }\n\n* {\n  box-sizing: border-box; }\n\ninput, textarea {\n  padding: 0; }\n\ninput, button, textarea {\n  border: none; }\n\ninput:focus {\n  outline: 0; }\n\nimg {\n  border: 0; }\n\na {\n  text-decoration: none;\n  color: #000; }\n\nli {\n  list-style: none; }\n\n.clear:after {\n  content: \"\";\n  display: block;\n  clear: both; }\n\n.d-b {\n  display: block; }\n\n.d-ib {\n  display: inline-block; }\n\n.d-i {\n  display: inline; }\n\n.p-r {\n  position: relative; }\n\n.p-a {\n  position: absolute; }\n\n.p-f {\n  position: fixed; }\n\nhtml, body, #app {\n  width: 100%;\n  height: 100%; }\n\nbody {\n  font-size: .16px; }\n\n.full-height {\n  height: 100%; }\n\n.footer-box {\n  position: relative;\n  height: .42rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.15); }\n  .footer-box:after {\n    content: \"\";\n    display: block;\n    width: 100%;\n    height: 1px;\n    position: absolute;\n    top: 0;\n    left: 0;\n    background: #ccc;\n    transform: scaleY(0.5); }\n  .footer-box a {\n    display: flex;\n    flex-grow: 1;\n    font-size: .12rem;\n    flex-direction: column;\n    align-items: center;\n    color: #898989; }\n    .footer-box a i.iconfont {\n      font-size: .2rem; }\n  .footer-box .active {\n    color: #65a032; }\n\nsection {\n  flex-grow: 1; }\n  section .swiper-container .swiper-wrapper .swiper-slide {\n    height: 2.3rem; }\n    section .swiper-container .swiper-wrapper .swiper-slide a {\n      display: block;\n      height: 100%; }\n      section .swiper-container .swiper-wrapper .swiper-slide a img {\n        height: 100%; }\n  section .swiper-container .swiper-pagination .swiper-pagination-bullet {\n    background: rgba(0, 0, 0, 0.3);\n    width: .07rem;\n    height: .04rem;\n    border-radius: .04rem; }\n  section .swiper-container .swiper-pagination .swiper-pagination-bullet-active {\n    width: .08rem;\n    height: .08rem;\n    border: .01rem solid #fff;\n    border-radius: 100%;\n    background: #ff7e05;\n    position: relative;\n    top: .02rem; }\n\n.index-box {\n  display: flex;\n  flex-direction: column; }\n  .index-box header {\n    width: 100%;\n    height: .44rem;\n    display: flex;\n    align-items: center;\n    padding-left: .1rem;\n    padding-right: .1rem;\n    background-color: rgba(101, 160, 50, 0);\n    position: fixed;\n    top: 0;\n    z-index: 10; }\n    .index-box header .location-box {\n      font-size: .12rem;\n      color: #fff;\n      display: flex;\n      align-items: center; }\n      .index-box header .location-box i {\n        margin-top: .03rem;\n        transform: scale(0.7, 0.9); }\n    .index-box header .search-box {\n      display: flex;\n      align-items: center;\n      height: .3rem;\n      background-color: #fff;\n      padding-left: .1rem;\n      color: #898989;\n      border-radius: .05rem;\n      flex-grow: 1;\n      margin-left: .1rem; }\n      .index-box header .search-box i {\n        margin-right: .1rem; }\n", ""]);
 
 // exports
 
@@ -5603,7 +5602,76 @@ var IndexContentComponent = function (_React$Component) {
     _createClass(IndexContentComponent, [{
         key: "render",
         value: function render() {
-            return React.createElement("section", null);
+            console.log("render");
+            return React.createElement(
+                "section",
+                null,
+                React.createElement(
+                    "div",
+                    { className: "swiper-container" },
+                    React.createElement(
+                        "div",
+                        { className: "swiper-wrapper" },
+                        React.createElement(
+                            "div",
+                            { className: "swiper-slide" },
+                            React.createElement(
+                                "a",
+                                { href: "#" },
+                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-03-03/6b24de7a7a42699abd07bb812c2d465e.jpg", alt: "" })
+                            )
+                        ),
+                        React.createElement(
+                            "div",
+                            { className: "swiper-slide" },
+                            React.createElement(
+                                "a",
+                                { href: "#" },
+                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-07-12/ebd7fec3d3b85fb94bb4e64e4f9262fb.jpg", alt: "" })
+                            )
+                        ),
+                        React.createElement(
+                            "div",
+                            { className: "swiper-slide" },
+                            React.createElement(
+                                "a",
+                                { href: "#" },
+                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-06-13/ad63e67ba3f8f62151dc7de67dae225a.jpg", alt: "" })
+                            )
+                        ),
+                        React.createElement(
+                            "div",
+                            { className: "swiper-slide" },
+                            React.createElement(
+                                "a",
+                                { href: "#" },
+                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-06-13/ad63e67ba3f8f62151dc7de67dae225a.jpg", alt: "" })
+                            )
+                        ),
+                        React.createElement(
+                            "div",
+                            { className: "swiper-slide" },
+                            React.createElement(
+                                "a",
+                                { href: "#" },
+                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-06-13/ad63e67ba3f8f62151dc7de67dae225a.jpg", alt: "" })
+                            )
+                        )
+                    ),
+                    React.createElement("div", { className: "swiper-pagination" })
+                )
+            );
+        }
+    }, {
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            var swiper = new Swiper(".swiper-container", {
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false,
+                loop: true,
+                pagination: ".swiper-pagination",
+                paginationClickable: true
+            });
         }
     }]);
 

@@ -1,7 +1,8 @@
 
 import FooterComponent from "./FooterComponent"
 import IndexContentComponent from "./IndexContentComponent"
-import getPosition from "../modules/getPosition"
+import store from "../flux/store"
+import actions from "../flux/actions"
 
 class IndexComponent extends React.Component {
     constructor(props, context) {
@@ -9,22 +10,32 @@ class IndexComponent extends React.Component {
 
         this.state = {
             isFinished: false,
-            postion: {}
+            position_info: store.getPositionInfo()
         }
     }
-    componentWillMount() {
-        console.log(2)
-        getPosition((position_info)=>{
-            console.log(position_info)
+    // componentWillMount() {
+    //     this.setState({
+    //         position_info: actions.getPosition()
+    //     })
+    // }
+    componentDidMount() {
+        let that = this
+        store.addPositionChangeListener(()=>{
+            that.setState({
+                position_info: actions.getPositionInfo(),
+                isFinished: true
+            })
         })
     }
     render() {
+        let {position_info} = this.state
+        console.log(position_info)
         return (
             <div className="index-box full-height">
                 <header>
                     <div className="location-box">
                         {
-                            this.isFinished?<span>上海</span>:<span>定位中...</span>
+                            this.state.isFinished?<span>{position_info.address}</span>:<span>定位中...</span>
                         }
                         <i className="iconfont icon-xiala"></i>
                     </div>

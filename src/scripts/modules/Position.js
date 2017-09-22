@@ -1,5 +1,5 @@
 
-let getPosition = (cb)=>{
+let Position = (cb)=>{
     var map, geolocation;
     //加载地图，调用浏览器定位服务
     map = new AMap.Map('container', {
@@ -48,7 +48,7 @@ let getPosition = (cb)=>{
 
 }
 
-export default getPosition
+export default Position
 
 
 
