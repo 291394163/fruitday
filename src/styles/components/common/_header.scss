@@ -1,0 +1,64 @@
+
+
+header {
+  height: .45rem;
+  display: flex;
+  align-items: center;
+  padding-left: .15rem;
+  padding-right: .15rem;
+  .logo {
+    font-size: .28rem;
+    color: $baseColor;
+    margin-right: .15rem;
+  }
+  .search-box {
+    width: 2.65rem;
+    height: .28rem;
+    background-color: $inputBgGray;
+    border-radius: .05rem;
+    margin-right: .15rem;
+    display: flex;
+    align-items: center;
+    i {
+      margin-left: .1rem;
+      margin-right: .05rem;
+    }
+    input {
+      background-color: $inputBgGray;
+      flex-grow: 1;
+    }
+    .del {
+      font-size: .2rem;
+      color: #0a8ddf;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

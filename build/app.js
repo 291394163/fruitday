@@ -3580,7 +3580,7 @@ var _warning = __webpack_require__(4);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _deepEqual = __webpack_require__(60);
+var _deepEqual = __webpack_require__(59);
 
 var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
@@ -5118,112 +5118,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _FooterComponent = __webpack_require__(55);
-
-var _FooterComponent2 = _interopRequireDefault(_FooterComponent);
-
-var _IndexContentComponent = __webpack_require__(56);
-
-var _IndexContentComponent2 = _interopRequireDefault(_IndexContentComponent);
-
-var _getPosition = __webpack_require__(57);
-
-var _getPosition2 = _interopRequireDefault(_getPosition);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var IndexComponent = function (_React$Component) {
-    _inherits(IndexComponent, _React$Component);
-
-    function IndexComponent(props, context) {
-        _classCallCheck(this, IndexComponent);
-
-        var _this = _possibleConstructorReturn(this, (IndexComponent.__proto__ || Object.getPrototypeOf(IndexComponent)).call(this, props, context));
-
-        _this.state = {
-            isFinished: false,
-            postion: {}
-        };
-        return _this;
-    }
-
-    _createClass(IndexComponent, [{
-        key: "componentWillMount",
-        value: function componentWillMount() {
-            console.log(2);
-            (0, _getPosition2.default)(function (position_info) {
-                console.log(position_info);
-            });
-        }
-    }, {
-        key: "render",
-        value: function render() {
-            return React.createElement(
-                "div",
-                { className: "index-box full-height" },
-                React.createElement(
-                    "header",
-                    null,
-                    React.createElement(
-                        "div",
-                        { className: "location-box" },
-                        this.isFinished ? React.createElement(
-                            "span",
-                            null,
-                            "\u4E0A\u6D77"
-                        ) : React.createElement(
-                            "span",
-                            null,
-                            "\u5B9A\u4F4D\u4E2D..."
-                        ),
-                        React.createElement("i", { className: "iconfont icon-xiala" })
-                    ),
-                    React.createElement(
-                        "div",
-                        { className: "search-box" },
-                        React.createElement("i", { className: "iconfont icon-search" }),
-                        React.createElement(
-                            "span",
-                            null,
-                            "\u65B0\u9C9C\u6C34\u679C\u3001\u751F\u9C9C"
-                        )
-                    )
-                ),
-                React.createElement(_IndexContentComponent2.default, null),
-                React.createElement(_FooterComponent2.default, null)
-            );
-        }
-    }]);
-
-    return IndexComponent;
-}(React.Component);
-
-//定义默认属性
-
-
-IndexComponent.defaultProps = {};
-
-exports.default = IndexComponent;
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -5257,6 +5151,153 @@ var RootComponent = function (_React$Component) {
 }(React.Component);
 
 exports.default = RootComponent;
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _HeaderComponent = __webpack_require__(56);
+
+var _HeaderComponent2 = _interopRequireDefault(_HeaderComponent);
+
+var _FooterComponent = __webpack_require__(55);
+
+var _FooterComponent2 = _interopRequireDefault(_FooterComponent);
+
+var _fetchJsonp = __webpack_require__(62);
+
+var _fetchJsonp2 = _interopRequireDefault(_fetchJsonp);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var IndexComponent = function (_React$Component) {
+    _inherits(IndexComponent, _React$Component);
+
+    function IndexComponent(props, context) {
+        _classCallCheck(this, IndexComponent);
+
+        var _this = _possibleConstructorReturn(this, (IndexComponent.__proto__ || Object.getPrototypeOf(IndexComponent)).call(this, props, context));
+
+        _this.state = {
+            pintuan: {}
+        };
+        return _this;
+    }
+
+    _createClass(IndexComponent, [{
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            var url1 = "http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C13730%2C59540%2C42287";
+            (0, _fetchJsonp2.default)(url1).then(function (res) {
+                console.log(res);
+            });
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "div",
+                { className: "index-box full-height" },
+                React.createElement(_HeaderComponent2.default, null),
+                React.createElement(
+                    "section",
+                    null,
+                    React.createElement(
+                        "div",
+                        { className: "swiper-container swiper-banners" },
+                        React.createElement(
+                            "div",
+                            { className: "swiper-wrapper" },
+                            React.createElement(
+                                "div",
+                                { className: "swiper-slide" },
+                                React.createElement(
+                                    "a",
+                                    { href: "#" },
+                                    React.createElement("img", { src: "https://s3.mogucdn.com/mlcdn/c45406/170921_419g0cj5l933d67850c6ggee84k4l_1200x400.jpg", alt: "" })
+                                )
+                            ),
+                            React.createElement(
+                                "div",
+                                { className: "swiper-slide" },
+                                React.createElement(
+                                    "a",
+                                    { href: "#" },
+                                    React.createElement("img", { src: "https://s3.mogucdn.com/mlcdn/c45406/170920_66l34009c2j2b2j850872ifjl73c5_1200x400.jpg", alt: "" })
+                                )
+                            )
+                        ),
+                        React.createElement("div", { className: "swiper-pagination" })
+                    ),
+                    React.createElement(
+                        "div",
+                        { className: "activity-box" },
+                        React.createElement(
+                            "a",
+                            { href: "#" },
+                            React.createElement("img", { src: "https://s3.mogucdn.com/mlcdn/c45406/170913_8ej3h5ll578f80jihh23ghcei3l1h_225x225.gif", alt: "" }),
+                            "1\u5206\u62BD\u5956"
+                        ),
+                        React.createElement(
+                            "a",
+                            { href: "#" },
+                            React.createElement("img", { src: "https://s11.mogucdn.com/mlcdn/c45406/170913_8e5d00adb9il82hikh25g8ed9j01c_225x225.png_160x160.v1cAC.70.webp", alt: "" }),
+                            "9.9\u5C01\u9876"
+                        ),
+                        React.createElement(
+                            "a",
+                            { href: "#" },
+                            React.createElement("img", { src: "https://s11.mogucdn.com/mlcdn/c45406/170913_04i7dae31fg3bkc1j6dej7b3j506d_225x225.png_160x160.v1cAC.70.webp", alt: "" }),
+                            "\u65F6\u5C1A\u62FC\u56E2"
+                        ),
+                        React.createElement(
+                            "a",
+                            { href: "#" },
+                            React.createElement("img", { src: "https://s3.mogucdn.com/mlcdn/c45406/170921_19ee6j3a6e42l44k1d25c72djbi15_225x225.jpg_160x160.v1cAC.70.webp", alt: "" }),
+                            "\u5927\u5BB6\u90FD\u5728\u4E70"
+                        )
+                    )
+                ),
+                React.createElement(_FooterComponent2.default, null)
+            );
+        }
+    }, {
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            var swiper_banners = new Swiper(".swiper-banners", {
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false,
+                loop: true,
+                pagination: ".swiper-pagination",
+                paginationClickable: true
+            });
+        }
+    }]);
+
+    return IndexComponent;
+}(React.Component);
+
+//定义默认属性
+
+
+IndexComponent.defaultProps = {};
+
+exports.default = IndexComponent;
 
 /***/ }),
 /* 51 */
@@ -5455,12 +5496,12 @@ if(false) {
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(59)(undefined);
+exports = module.exports = __webpack_require__(58)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n/* 公共样式 */\nhtml, body, h1, h2, h3, h4, h5, h6, ul, li, img, dl, dt, dd, a, p {\n  padding: 0;\n  margin: 0; }\n\n* {\n  box-sizing: border-box; }\n\ninput, textarea {\n  padding: 0; }\n\ninput, button, textarea {\n  border: none; }\n\ninput:focus {\n  outline: 0; }\n\nimg {\n  border: 0; }\n\na {\n  text-decoration: none;\n  color: #000; }\n\nli {\n  list-style: none; }\n\n.clear:after {\n  content: \"\";\n  display: block;\n  clear: both; }\n\n.d-b {\n  display: block; }\n\n.d-ib {\n  display: inline-block; }\n\n.d-i {\n  display: inline; }\n\n.p-r {\n  position: relative; }\n\n.p-a {\n  position: absolute; }\n\n.p-f {\n  position: fixed; }\n\nhtml, body, #app {\n  width: 100%;\n  height: 100%; }\n\nbody {\n  font-size: .16px; }\n\n.full-height {\n  height: 100%; }\n\n.footer-box {\n  position: relative;\n  height: .42rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.15); }\n  .footer-box:after {\n    content: \"\";\n    display: block;\n    width: 100%;\n    height: 1px;\n    position: absolute;\n    top: 0;\n    left: 0;\n    background: #ccc;\n    transform: scaleY(0.5); }\n  .footer-box a {\n    display: flex;\n    flex-grow: 1;\n    font-size: .12rem;\n    flex-direction: column;\n    align-items: center;\n    color: #898989; }\n    .footer-box a i.iconfont {\n      font-size: .2rem; }\n  .footer-box .active {\n    color: #65a032; }\n\nsection {\n  flex-grow: 1; }\n  section .swiper-container .swiper-wrapper .swiper-slide {\n    height: 2.3rem; }\n    section .swiper-container .swiper-wrapper .swiper-slide a {\n      display: block;\n      height: 100%; }\n      section .swiper-container .swiper-wrapper .swiper-slide a img {\n        height: 100%; }\n  section .swiper-container .swiper-pagination .swiper-pagination-bullet {\n    background: rgba(0, 0, 0, 0.3);\n    width: .07rem;\n    height: .04rem;\n    border-radius: .04rem; }\n  section .swiper-container .swiper-pagination .swiper-pagination-bullet-active {\n    width: .08rem;\n    height: .08rem;\n    border: .01rem solid #fff;\n    border-radius: 100%;\n    background: #ff7e05;\n    position: relative;\n    top: .02rem; }\n\n.index-box {\n  display: flex;\n  flex-direction: column; }\n  .index-box header {\n    width: 100%;\n    height: .44rem;\n    display: flex;\n    align-items: center;\n    padding-left: .1rem;\n    padding-right: .1rem;\n    background-color: rgba(101, 160, 50, 0);\n    position: fixed;\n    top: 0;\n    z-index: 10; }\n    .index-box header .location-box {\n      font-size: .12rem;\n      color: #fff;\n      display: flex;\n      align-items: center; }\n      .index-box header .location-box i {\n        margin-top: .03rem;\n        transform: scale(0.7, 0.9); }\n    .index-box header .search-box {\n      display: flex;\n      align-items: center;\n      height: .3rem;\n      background-color: #fff;\n      padding-left: .1rem;\n      color: #898989;\n      border-radius: .05rem;\n      flex-grow: 1;\n      margin-left: .1rem; }\n      .index-box header .search-box i {\n        margin-right: .1rem; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n/* 公共样式 */\nhtml, body, h1, h2, h3, h4, h5, h6, ul, li, img, dl, dt, dd, a, p {\n  padding: 0;\n  margin: 0; }\n\n* {\n  box-sizing: border-box; }\n\ninput, textarea {\n  padding: 0; }\n\ninput, button, textarea {\n  border: none; }\n\ninput:focus {\n  outline: 0; }\n\nimg {\n  border: 0; }\n\na {\n  text-decoration: none;\n  color: #000; }\n\nli {\n  list-style: none; }\n\n.clear:after {\n  content: \"\";\n  display: block;\n  clear: both; }\n\n.d-b {\n  display: block; }\n\n.d-ib {\n  display: inline-block; }\n\n.d-i {\n  display: inline; }\n\n.p-r {\n  position: relative; }\n\n.p-a {\n  position: absolute; }\n\n.p-f {\n  position: fixed; }\n\nhtml, body, #app {\n  width: 100%;\n  height: 100%; }\n\nbody {\n  font-size: .16px; }\n\n.full-height {\n  height: 100%; }\n\nheader {\n  height: .45rem;\n  display: flex;\n  align-items: center;\n  padding-left: .15rem;\n  padding-right: .15rem; }\n  header .logo {\n    font-size: .28rem;\n    color: #ff6699;\n    margin-right: .15rem; }\n  header .search-box {\n    width: 2.65rem;\n    height: .28rem;\n    background-color: #f4f4f4;\n    border-radius: .05rem;\n    margin-right: .15rem;\n    display: flex;\n    align-items: center; }\n    header .search-box i {\n      margin-left: .1rem;\n      margin-right: .05rem; }\n    header .search-box input {\n      background-color: #f4f4f4;\n      flex-grow: 1; }\n    header .search-box .del {\n      font-size: .2rem;\n      color: #0a8ddf; }\n\nfooter {\n  position: relative;\n  background-color: #fafafa;\n  height: .49rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-around; }\n  footer:after {\n    content: \"\";\n    display: block;\n    width: 100%;\n    height: 1px;\n    position: absolute;\n    top: 0;\n    left: 0;\n    background: #ccc;\n    transform: scaleY(0.5); }\n  footer a {\n    display: flex;\n    flex-grow: 1;\n    font-size: .12rem;\n    flex-direction: column;\n    align-items: center;\n    color: #999; }\n    footer a i.iconfont {\n      font-size: .2rem; }\n  footer .active {\n    color: #ff6699; }\n\n.index-box {\n  display: flex;\n  flex-direction: column; }\n  .index-box section {\n    flex-grow: 1;\n    background-color: #efefef; }\n    .index-box section .swiper-banners .swiper-wrapper .swiper-slide {\n      height: 2.3rem; }\n      .index-box section .swiper-banners .swiper-wrapper .swiper-slide a {\n        display: block;\n        height: 100%; }\n        .index-box section .swiper-banners .swiper-wrapper .swiper-slide a img {\n          width: 100%;\n          height: 100%; }\n    .index-box section .swiper-banners .swiper-pagination .swiper-pagination-bullet {\n      background: rgba(0, 0, 0, 0.3);\n      width: .07rem;\n      height: .04rem;\n      border-radius: .04rem; }\n    .index-box section .swiper-banners .swiper-pagination .swiper-pagination-bullet-active {\n      width: .08rem;\n      height: .08rem;\n      border: .01rem solid #fff;\n      border-radius: 100%;\n      background: #ff6699;\n      position: relative;\n      top: .02rem; }\n    .index-box section .activity-box {\n      display: flex;\n      height: 1.09rem;\n      align-items: center;\n      justify-content: space-around;\n      background-color: #fff; }\n      .index-box section .activity-box a {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        color: #999; }\n        .index-box section .activity-box a img {\n          width: .8rem;\n          height: .8rem;\n          border-radius: 50%;\n          margin-bottom: .06rem; }\n", ""]);
 
 // exports
 
@@ -5472,13 +5513,13 @@ exports.push([module.i, "@charset \"UTF-8\";\n/* 公共样式 */\nhtml, body, h1
 "use strict";
 
 
-var _RootComponent = __webpack_require__(50);
+var _RootComponent = __webpack_require__(49);
 
 var _RootComponent2 = _interopRequireDefault(_RootComponent);
 
 var _reactRouter = __webpack_require__(51);
 
-var _IndexComponent = __webpack_require__(49);
+var _IndexComponent = __webpack_require__(50);
 
 var _IndexComponent2 = _interopRequireDefault(_IndexComponent);
 
@@ -5533,8 +5574,8 @@ var FooterComponent = function (_React$Component) {
         key: "render",
         value: function render() {
             return React.createElement(
-                "div",
-                { className: "footer-box" },
+                "footer",
+                null,
                 React.createElement(
                     "a",
                     { className: "active", href: "#" },
@@ -5550,14 +5591,14 @@ var FooterComponent = function (_React$Component) {
                 React.createElement(
                     "a",
                     { href: "#" },
-                    React.createElement("i", { className: "iconfont icon-gouwuchekong" }),
+                    React.createElement("i", { className: "iconfont icon-gouwuche-copy" }),
                     "\u8D2D\u7269\u8F66"
                 ),
                 React.createElement(
                     "a",
                     { href: "#" },
                     React.createElement("i", { className: "iconfont icon-home" }),
-                    "\u6211\u7684\u679C\u56ED"
+                    "\u6211"
                 )
             );
         }
@@ -5587,167 +5628,51 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IndexContentComponent = function (_React$Component) {
-    _inherits(IndexContentComponent, _React$Component);
+var HeaderComponent = function (_React$Component) {
+    _inherits(HeaderComponent, _React$Component);
 
-    function IndexContentComponent(props, context) {
-        _classCallCheck(this, IndexContentComponent);
+    function HeaderComponent(props, context) {
+        _classCallCheck(this, HeaderComponent);
 
-        var _this = _possibleConstructorReturn(this, (IndexContentComponent.__proto__ || Object.getPrototypeOf(IndexContentComponent)).call(this, props, context));
+        var _this = _possibleConstructorReturn(this, (HeaderComponent.__proto__ || Object.getPrototypeOf(HeaderComponent)).call(this, props, context));
 
         _this.state = {};
         return _this;
     }
 
-    _createClass(IndexContentComponent, [{
+    _createClass(HeaderComponent, [{
         key: "render",
         value: function render() {
-            console.log("render");
             return React.createElement(
-                "section",
+                "header",
                 null,
+                React.createElement("i", { className: "iconfont icon-logo logo" }),
                 React.createElement(
                     "div",
-                    { className: "swiper-container" },
+                    { className: "search-box" },
+                    React.createElement("i", { className: "iconfont icon-search" }),
+                    React.createElement("input", { type: "text", placeholder: "\u5957\u88C5" }),
                     React.createElement(
-                        "div",
-                        { className: "swiper-wrapper" },
-                        React.createElement(
-                            "div",
-                            { className: "swiper-slide" },
-                            React.createElement(
-                                "a",
-                                { href: "#" },
-                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-03-03/6b24de7a7a42699abd07bb812c2d465e.jpg", alt: "" })
-                            )
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "swiper-slide" },
-                            React.createElement(
-                                "a",
-                                { href: "#" },
-                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-07-12/ebd7fec3d3b85fb94bb4e64e4f9262fb.jpg", alt: "" })
-                            )
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "swiper-slide" },
-                            React.createElement(
-                                "a",
-                                { href: "#" },
-                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-06-13/ad63e67ba3f8f62151dc7de67dae225a.jpg", alt: "" })
-                            )
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "swiper-slide" },
-                            React.createElement(
-                                "a",
-                                { href: "#" },
-                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-06-13/ad63e67ba3f8f62151dc7de67dae225a.jpg", alt: "" })
-                            )
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "swiper-slide" },
-                            React.createElement(
-                                "a",
-                                { href: "#" },
-                                React.createElement("img", { src: "https://imgjd2.fruitday.com/images/2017-06-13/ad63e67ba3f8f62151dc7de67dae225a.jpg", alt: "" })
-                            )
-                        )
-                    ),
-                    React.createElement("div", { className: "swiper-pagination" })
-                )
+                        "i",
+                        { className: "del" },
+                        "\xD7"
+                    )
+                ),
+                React.createElement("i", { className: "iconfont icon-xinxi xinxi" }),
+                React.createElement("i", null)
             );
-        }
-    }, {
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            var swiper = new Swiper(".swiper-container", {
-                autoplay: 3000,
-                autoplayDisableOnInteraction: false,
-                loop: true,
-                pagination: ".swiper-pagination",
-                paginationClickable: true
-            });
         }
     }]);
 
-    return IndexContentComponent;
+    return HeaderComponent;
 }(React.Component);
 
-//定义默认属性
+HeaderComponent.defaultProps = {};
 
-
-IndexContentComponent.defaultProps = {};
-
-exports.default = IndexContentComponent;
+exports.default = HeaderComponent;
 
 /***/ }),
 /* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var getPosition = function getPosition(cb) {
-    var map, geolocation;
-    //加载地图，调用浏览器定位服务
-    map = new AMap.Map('container', {
-        resizeEnable: true
-    });
-    map.plugin('AMap.Geolocation', function () {
-        geolocation = new AMap.Geolocation({
-            enableHighAccuracy: true, //是否使用高精度定位，默认:true
-            timeout: 60000, //超过10秒后停止定位，默认：无穷大
-            buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
-            zoomToAccuracy: true, //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
-            buttonPosition: 'RB'
-        });
-        geolocation.getCurrentPosition();
-        AMap.event.addListener(geolocation, 'complete', onComplete); //返回定位信息
-        // AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
-    });
-    //解析定位结果
-    function onComplete(data) {
-        console.log(data);
-        var position_info = {
-            longitude: data.position.getLng(),
-            latitude: data.position.getLat()
-        };
-        regeocoder();
-        function regeocoder() {
-            //逆地理编码
-            var geocoder = new AMap.Geocoder({
-                radius: 1000,
-                extensions: "all"
-            });
-            geocoder.getAddress([position_info.longitude, position_info.latitude], function (status, result) {
-                if (status === 'complete' && result.info === 'OK') {
-                    geocoder_CallBack(result);
-                }
-            });
-        }
-        function geocoder_CallBack(data) {
-            var address = data.regeocode.aois["0"].name;
-            position_info.address = address;
-            console.log(position_info);
-            cb(position_info);
-            // var address = data.regeocode.formattedAddress; //返回地址描述
-        }
-    }
-};
-
-exports.default = getPosition;
-
-/***/ }),
-/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6627,7 +6552,7 @@ module.exports = factory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports) {
 
 /*
@@ -6709,12 +6634,12 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pSlice = Array.prototype.slice;
-var objectKeys = __webpack_require__(62);
-var isArguments = __webpack_require__(61);
+var objectKeys = __webpack_require__(61);
+var isArguments = __webpack_require__(60);
 
 var deepEqual = module.exports = function (actual, expected, opts) {
   if (!opts) opts = {};
@@ -6809,7 +6734,7 @@ function objEquiv(a, b, opts) {
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports) {
 
 var supportsArgumentsClass = (function(){
@@ -6835,7 +6760,7 @@ function unsupported(object){
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports) {
 
 exports = module.exports = typeof Object.keys === 'function'
@@ -6848,6 +6773,137 @@ function shim (obj) {
   return keys;
 }
 
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, module], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
+    factory(exports, module);
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, mod);
+    global.fetchJsonp = mod.exports;
+  }
+})(this, function (exports, module) {
+  'use strict';
+
+  var defaultOptions = {
+    timeout: 5000,
+    jsonpCallback: 'callback',
+    jsonpCallbackFunction: null
+  };
+
+  function generateCallbackFunction() {
+    return 'jsonp_' + Date.now() + '_' + Math.ceil(Math.random() * 100000);
+  }
+
+  function clearFunction(functionName) {
+    // IE8 throws an exception when you try to delete a property on window
+    // http://stackoverflow.com/a/1824228/751089
+    try {
+      delete window[functionName];
+    } catch (e) {
+      window[functionName] = undefined;
+    }
+  }
+
+  function removeScript(scriptId) {
+    var script = document.getElementById(scriptId);
+    if (script) {
+      document.getElementsByTagName('head')[0].removeChild(script);
+    }
+  }
+
+  function fetchJsonp(_url) {
+    var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+    // to avoid param reassign
+    var url = _url;
+    var timeout = options.timeout || defaultOptions.timeout;
+    var jsonpCallback = options.jsonpCallback || defaultOptions.jsonpCallback;
+
+    var timeoutId = undefined;
+
+    return new Promise(function (resolve, reject) {
+      var callbackFunction = options.jsonpCallbackFunction || generateCallbackFunction();
+      var scriptId = jsonpCallback + '_' + callbackFunction;
+
+      window[callbackFunction] = function (response) {
+        resolve({
+          ok: true,
+          // keep consistent with fetch API
+          json: function json() {
+            return Promise.resolve(response);
+          }
+        });
+
+        if (timeoutId) clearTimeout(timeoutId);
+
+        removeScript(scriptId);
+
+        clearFunction(callbackFunction);
+      };
+
+      // Check if the user set their own params, and if not add a ? to start a list of params
+      url += url.indexOf('?') === -1 ? '?' : '&';
+
+      var jsonpScript = document.createElement('script');
+      jsonpScript.setAttribute('src', '' + url + jsonpCallback + '=' + callbackFunction);
+      if (options.charset) {
+        jsonpScript.setAttribute('charset', options.charset);
+      }
+      jsonpScript.id = scriptId;
+      document.getElementsByTagName('head')[0].appendChild(jsonpScript);
+
+      timeoutId = setTimeout(function () {
+        reject(new Error('JSONP request to ' + _url + ' timed out'));
+
+        clearFunction(callbackFunction);
+        removeScript(scriptId);
+        window[callbackFunction] = function () {
+          clearFunction(callbackFunction);
+        };
+      }, timeout);
+
+      // Caught if got 404/500
+      jsonpScript.onerror = function () {
+        reject(new Error('JSONP request to ' + _url + ' failed'));
+
+        clearFunction(callbackFunction);
+        removeScript(scriptId);
+        if (timeoutId) clearTimeout(timeoutId);
+      };
+    });
+  }
+
+  // export as global function
+  /*
+  let local;
+  if (typeof global !== 'undefined') {
+    local = global;
+  } else if (typeof self !== 'undefined') {
+    local = self;
+  } else {
+    try {
+      local = Function('return this')();
+    } catch (e) {
+      throw new Error('polyfill failed because global object is unavailable in this environment');
+    }
+  }
+  local.fetchJsonp = fetchJsonp;
+  */
+
+  module.exports = fetchJsonp;
+});
 
 /***/ }),
 /* 63 */
@@ -10675,7 +10731,7 @@ var _require2 = __webpack_require__(10),
     isValidElement = _require2.isValidElement;
 
 var ReactNoopUpdateQueue = __webpack_require__(47);
-var factory = __webpack_require__(58);
+var factory = __webpack_require__(57);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 

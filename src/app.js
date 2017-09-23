@@ -5,7 +5,7 @@ import RootComponent from "./scripts/components/RootComponent"
 
 import {Router, Route, hashHistory, IndexRedirect, IndexRoute} from "react-router"
 
-import IndexComponent from "./scripts/components/IndexComponent"
+import IndexComponent from "./scripts/components/index/IndexComponent"
 
 ReactDOM.render(
     <Router history={hashHistory}>

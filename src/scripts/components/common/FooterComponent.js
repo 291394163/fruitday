@@ -10,7 +10,7 @@ class FooterComponent extends React.Component {
     }
     render() {
         return (
-            <div className="footer-box">
+            <footer>
                 <a className="active" href="#">
                     <i className="iconfont icon-shouye"></i>
                     首页
@@ -20,14 +20,14 @@ class FooterComponent extends React.Component {
                     分类
                 </a>
                 <a href="#">
-                    <i className="iconfont icon-gouwuchekong"></i>
+                    <i className="iconfont icon-gouwuche-copy"></i>
                     购物车
                 </a>
                 <a href="#">
                     <i className="iconfont icon-home"></i>
-                    我的果园
+                    我
                 </a>
-            </div>
+            </footer>
         )
     }
 }
