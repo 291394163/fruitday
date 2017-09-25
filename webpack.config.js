@@ -9,23 +9,6 @@ module.exports = {
         filename:'app.js'
     },
     devServer:{
-        // proxy:{
-        //     '/list':{
-        //         target:'https://m.toutiao.com',
-        //         changeOrigin:true,
-        //         secure:false
-        //     },
-        //     '/api':{
-        //         target:'https://m.toutiao.com',
-        //         changeOrigin:true,
-        //         pathRewrite: {'^/api' : ''}
-        //     },
-        //     '/ele':{
-        //         target:'https://restapi.ele.me',
-        //         changeOrigin:true,
-        //         pathRewrite: {'^/ele' : ''}
-        //     }
-        // },
 		contentBase:'./build',//服务器要在哪个地方开启，默认是在webpack.config.js的路径中
 		port:9000,//端口
 		host:'localhost',//域名
@@ -36,15 +19,15 @@ module.exports = {
             template:'./src/index.html',
             filename:'index.html'
         }),
-        // new ExtractWebpackPlugin({
-        //     filename:'app.css',
-        //     allChunks:true
-        // })
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false
-        //     }
-        // })
+        new ExtractWebpackPlugin({
+            filename:'app.css',
+            allChunks:true
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
     ],
     module:{
         loaders:[
@@ -52,29 +35,29 @@ module.exports = {
             //     test:/\.css$/,
             //     loader:'style-loader!css-loader'
             // },
-            {
-                test:/\.scss$/,
-                loader:'style-loader!css-loader!sass-loader'
-            },
-
-            // {
-            //     test:/\.css$/,
-            //     loader:ExtractWebpackPlugin.extract({
-            //         fallback:'style-loader',
-            //         use:'css-loader'
-            //     })
-            // },
             // {
             //     test:/\.scss$/,
-            //     loader:ExtractWebpackPlugin.extract({
-            //         fallback:'style-loader',
-            //         use:'css-loader!sass-loader'
-            //     })
+            //     loader:'style-loader!css-loader!sass-loader'
             // },
             // {
             //     test:/\.js$/,
             //     loader:'jsx-loader'
             // },
+
+            {
+                test:/\.css$/,
+                loader:ExtractWebpackPlugin.extract({
+                    fallback:'style-loader',
+                    use:'css-loader'
+                })
+            },
+            {
+                test:/\.scss$/,
+                loader:ExtractWebpackPlugin.extract({
+                    fallback:'style-loader',
+                    use:'css-loader!sass-loader'
+                })
+            },
             {
                 test:/\.js$/,
                 exclude: /node_modules/,
