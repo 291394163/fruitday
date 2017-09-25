@@ -5194,7 +5194,7 @@ var IndexComponent = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (IndexComponent.__proto__ || Object.getPrototypeOf(IndexComponent)).call(this, props, context));
 
         _this.state = {
-            pintuan: {}
+            tuangou: {}
         };
         return _this;
     }
@@ -5202,10 +5202,41 @@ var IndexComponent = function (_React$Component) {
     _createClass(IndexComponent, [{
         key: "componentDidMount",
         value: function componentDidMount() {
+            var that = this;
+            var swiper_banners = new Swiper(".swiper-banners", {
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false,
+                loop: true,
+                pagination: ".swiper-pagination",
+                paginationClickable: true
+            });
             var url1 = "http://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C13730%2C59540%2C42287";
             (0, _fetchJsonp2.default)(url1).then(function (res) {
-                console.log(res);
+                return res.json();
+            }).then(function (json) {
+                that.setState({
+                    tuangou: json.data
+                });
+            }).catch(function (ex) {
+                console.log(ex);
             });
+        }
+    }, {
+        key: "showActivities",
+        value: function showActivities() {
+            var arr = [];
+            console.log(this.state.tuangou);
+            var activities = this.state.tuangou["13730"];
+            console.log(activities);
+            // activities.forEach((item, i)=>{
+            //     arr.push(
+            //         <a href="#">
+            //             <img src={item.image} alt={item.title}/>
+            //             {item.title}
+            //         </a>
+            //     )
+            // })
+            return arr;
         }
     }, {
         key: "render",
@@ -5247,45 +5278,11 @@ var IndexComponent = function (_React$Component) {
                     React.createElement(
                         "div",
                         { className: "activity-box" },
-                        React.createElement(
-                            "a",
-                            { href: "#" },
-                            React.createElement("img", { src: "https://s3.mogucdn.com/mlcdn/c45406/170913_8ej3h5ll578f80jihh23ghcei3l1h_225x225.gif", alt: "" }),
-                            "1\u5206\u62BD\u5956"
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "#" },
-                            React.createElement("img", { src: "https://s11.mogucdn.com/mlcdn/c45406/170913_8e5d00adb9il82hikh25g8ed9j01c_225x225.png_160x160.v1cAC.70.webp", alt: "" }),
-                            "9.9\u5C01\u9876"
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "#" },
-                            React.createElement("img", { src: "https://s11.mogucdn.com/mlcdn/c45406/170913_04i7dae31fg3bkc1j6dej7b3j506d_225x225.png_160x160.v1cAC.70.webp", alt: "" }),
-                            "\u65F6\u5C1A\u62FC\u56E2"
-                        ),
-                        React.createElement(
-                            "a",
-                            { href: "#" },
-                            React.createElement("img", { src: "https://s3.mogucdn.com/mlcdn/c45406/170921_19ee6j3a6e42l44k1d25c72djbi15_225x225.jpg_160x160.v1cAC.70.webp", alt: "" }),
-                            "\u5927\u5BB6\u90FD\u5728\u4E70"
-                        )
+                        this.showActivities()
                     )
                 ),
                 React.createElement(_FooterComponent2.default, null)
             );
-        }
-    }, {
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            var swiper_banners = new Swiper(".swiper-banners", {
-                autoplay: 3000,
-                autoplayDisableOnInteraction: false,
-                loop: true,
-                pagination: ".swiper-pagination",
-                paginationClickable: true
-            });
         }
     }]);
 

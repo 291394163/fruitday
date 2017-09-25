@@ -4,6 +4,9 @@ html,body,h1,h2,h3,h4,h5,h6,ul,li,img,dl,dt,dd,a,p {
   padding: 0;
   margin: 0;
 }
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -55,10 +58,14 @@ html,body,#app {
   height: 100%;
 }
 body {
-  font-size: .16px;
+  font-size: .12rem;
 }
 .full-height {
   height: 100%;
+}
+.root-box {
+  display: flex;
+  flex-direction: column;
 }
 
 

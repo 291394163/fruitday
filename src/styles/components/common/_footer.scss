@@ -1,12 +1,14 @@
 
 
-footer {
+.footer-box {
   @include onepixel();
   background-color: $footerBgGray;
   height: .49rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-grow: 0;
+  flex-shrink: 0;
   a {
     display: flex;
     flex-grow: 1;
@@ -22,32 +24,5 @@ footer {
     color: $baseColor;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -1,11 +1,13 @@
 
 
-header {
+.header-box {
   height: .45rem;
   display: flex;
   align-items: center;
   padding-left: .15rem;
   padding-right: .15rem;
+  flex-grow: 0;
+  flex-shrink: 0;
   .logo {
     font-size: .28rem;
     color: $baseColor;

@@ -3,4 +3,20 @@
 @import "./base/_reset";
 @import "./base/_base";
 @import "./base/_mixin";
-@import "./components/index/index";
+
+@import "./components/common/_header.scss";
+
+@import "./components/common/_footer.scss";
+
+@import "./components/index/index.scss";
+
+@import "./components/category/category.scss";
+
+@import "./components/category/category2th.scss";
+
+@import "./components/category/newSearch.scss";
+
+@import "./components/my/login.scss";
+
+@import "./components/cart/cart.scss";
+

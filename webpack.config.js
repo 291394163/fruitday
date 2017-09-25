@@ -71,10 +71,10 @@ module.exports = {
             //         use:'css-loader!sass-loader'
             //     })
             // },
-            {
-                test:/\.js$/,
-                loader:'jsx-loader'
-            },
+            // {
+            //     test:/\.js$/,
+            //     loader:'jsx-loader'
+            // },
             {
                 test:/\.js$/,
                 exclude: /node_modules/,
